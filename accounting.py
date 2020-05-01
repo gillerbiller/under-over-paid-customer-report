@@ -25,11 +25,14 @@ def underpaid_customer_report(customer_orders):
     
 
     if expected_cost > amount_paid:
-      print(f"{customer_name} paid ${amount_paid}, their expected cost \
-was ${expected_cost}. Customer underpaid by ${amount_underpaid}.")
+
+      print(f"{customer_name} paid ${amount_paid}.0, expected cost was \
+${expected_cost}. Customer underpaid by ${amount_underpaid}.")
+
     elif expected_cost < amount_paid:
-      print(f"{customer_name} paid ${amount_paid}, their expected cost was \
+      print(f"{customer_name} paid ${amount_paid}, expected cost was \
 ${expected_cost}. Customer overpaid by ${amount_overpaid} ")
+
     else:
       expected_cost = amount_paid
       continue
